@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Results and simulations for the 2001 FIFA Club World Championship group stage and knockout rounds.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+
+
+
+
+    <title>2001 FIFA Club World Championship - Group Stage Results</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .group {
+            margin-bottom: 30px;
+        }
+        .group h2 {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+   
+
+
+    <div class="container">
+        <h1>2001 FIFA Club World Championship - Group Stage Results</h1>
+
+            <style>
+                .team-logo {
+                    width: 30px; /* Adjust this value as needed */
+                    height: auto; /* Maintains aspect ratio */
+                }
+            </style>
+
+        <!-- Group A -->
+        <div class="group">
+            <h2>Group A</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Team</th>
+                        <th>Pld</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                        <th>Pts</th>
+                        <th>Qualification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td id="teamA1">
+                            <img src="/team_logos/Boca_Juniors_logo18.jpeg" alt="Boca Juniors" class="team-logo"> 
+                            <span>Boca Juniors</span></td>                        
+                        <td id="pldA1">3</td>
+                        <td id="winA1">2</td>
+                        <td id="drawA1">1</td>
+                        <td id="lossA1">0</td>
+                        <td id="gfA1">6</td>
+                        <td id="gaA1">2</td>
+                        <td id="gdA1">+4</td>
+                        <td id="ptsA1">7</td>
+                        <td id="qualificationA1">Advance to Semi-Final</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="teamA2">
+                            <img src="/team_logos/RC_Deportivo_La_Coruña_logo.jpeg" alt="Deportivo La Coruña" class="team-logo">
+                            <span>Deportivo La Coruña</span></td>                       
+                        <td id="pldA2">3</td>
+                        <td id="winA2">2</td>
+                        <td id="drawA2">1</td>
+                        <td id="lossA2">0</td>
+                        <td id="gfA2">8</td>
+                        <td id="gaA2">5</td>
+                        <td id="gdA2">+3</td>
+                        <td id="ptsA2">7</td>
+                        <td id="qualificationA2">Advance to Semi-Final</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="teamA3">
+                            <img src="/team_logos/Zamalek_SC_logo.jpeg" alt="Zamalek" class="team-logo">
+                            <span>Zamalek</span>
+                        </td>                        <td id="pldA3">3</td>
+                        <td id="winA3">1</td>
+                        <td id="drawA3">0</td>
+                        <td id="lossA3">2</td>
+                        <td id="gfA3">5</td>
+                        <td id="gaA3">8</td>
+                        <td id="gdA3">-3</td>
+                        <td id="ptsA3">3</td>
+                        <td id="qualificationA3">–</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="teamA4">
+                            <img src="/team_logos/Wollongong_Wolves_FC.jpeg" alt="Wollongong Wolves" class="team-logo">
+                            <span>Wollongong Wolves</span>
+                        </td>                        <td id="pldA4">3</td>
+                        <td id="winA4">0</td>
+                        <td id="drawA4">0</td>
+                        <td id="lossA4">3</td>
+                        <td id="gfA4">1</td>
+                        <td id="gaA4">7</td>
+                        <td id="gdA4">-6</td>
+                        <td id="ptsA4">0</td>
+                        <td id="qualificationA4">–</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Group B -->
+        <div class="group">
+            <h2>Group B</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Team</th>
+                        <th>Pld</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                        <th>Pts</th>
+                        <th>Qualification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td id="teamB1">
+                            <img src="/team_logos/Galatasaray_4_Sterne_Logo.jpeg" alt="Galatasaray" class="team-logo">
+                            <span>Galatasaray</span>
+                        </td>                        <td id="pldB1">3</td>
+                        <td id="winB1">3</td>
+                        <td id="drawB1">0</td>
+                        <td id="lossB1">0</td>
+                        <td id="gfB1">7</td>
+                        <td id="gaB1">2</td>
+                        <td id="gdB1">+5</td>
+                        <td id="ptsB1">9</td>
+                        <td id="qualificationB1">Advance to Semi-Final</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="teamB2">
+                            <img src="/team_logos/Palmeiras_logo.jpeg" alt="Palmeiras" class="team-logo">
+                            <span>Palmeiras</span>
+                        </td>                        <td id="pldB2">3</td>
+                        <td id="winB2">2</td>
+                        <td id="drawB2">1</td>
+                        <td id="lossB2">0</td>
+                        <td id="gfB2">5</td>
+                        <td id="gaB2">3</td>
+                        <td id="gdB2">+2</td>
+                        <td id="ptsB2">7</td>
+                        <td id="qualificationB2">–</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="teamB3">
+                            <img src="/team_logos/Olimpia_Honduras.jpeg" alt="Olimpia" class="team-logo">
+                            <span>Olimpia</span>
+                        </td>                        <td id="pldB3">3</td>
+                        <td id="winB3">1</td>
+                        <td id="drawB3">1</td>
+                        <td id="lossB3">1</td>
+                        <td id="gfB3">3</td>
+                        <td id="gaB3">4</td>
+                        <td id="gdB3">-1</td>
+                        <td id="ptsB3">4</td>
+                        <td id="qualificationB3">–</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="teamB4">
+                            <img src="/team_logos/Al-Hilal_SFC_logo.jpeg" alt="Al-Hilal" class="team-logo">
+                            <span>Al-Hilal</span>
+                        </td>                        <td id="pldB4">3</td>
+                        <td id="winB4">1</td>
+                        <td id="drawB4">0</td>
+                        <td id="lossB4">2</td>
+                        <td id="gfB4">4</td>
+                        <td id="gaB4">8</td>
+                        <td id="gdB4">-4</td>
+                        <td id="ptsB4">3</td>
+                        <td id="qualificationB4">–</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Group C -->
+        <div class="group">
+            <h2>Group C</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Team</th>
+                        <th>Pld</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                        <th>Pts</th>
+                        <th>Qualification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td id="teamC1">
+                            <img src="/team_logos/Real_Madrid_CF.jpeg" alt="Real Madrid" class="team-logo">
+                            <span>Real Madrid</span>
+                        </td>                        <td id="pldC1">3</td>
+                        <td id="winC1">3</td>
+                        <td id="drawC1">0</td>
+                        <td id="lossC1">0</td>
+                        <td id="gfC1">8</td>
+                        <td id="gaC1">3</td>
+                        <td id="gdC1">+5</td>
+                        <td id="ptsC1">9</td>
+                        <td id="qualificationC1">Advance to Semi-Final</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="teamC2">
+                            <img src="/team_logos/Jubilo_Iwata_logo.jpeg" alt="Júbilo Iwata" class="team-logo">
+                            <span>Júbilo Iwata</span>
+                        </td>                        <td id="pldC2">3</td>
+                        <td id="winC2">2</td>
+                        <td id="drawC2">1</td>
+                        <td id="lossC2">0</td>
+                        <td id="gfC2">6</td>
+                        <td id="gaC2">4</td>
+                        <td id="gdC2">+2</td>
+                        <td id="ptsC2">7</td>
+                        <td id="qualificationC2">–</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="teamC3">
+                            <img src="/team_logos/Los_Angeles_Galaxy_logo.jpeg" alt="Los Angeles Galaxy" class="team-logo">
+                            <span>Los Angeles Galaxy</span>
+                        </td>                        <td id="pldC3">3</td>
+                        <td id="winC3">1</td>
+                        <td id="drawC3">1</td>
+                        <td id="lossC3">1</td>
+                        <td id="gfC3">4</td>
+                        <td id="gaC3">5</td>
+                        <td id="gdC3">-1</td>
+                        <td id="ptsC3">4</td>
+                        <td id="qualificationC3">–</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="teamC4">
+                            <img src="/team_logos/Accra_hearts_of_oak_sc.jpeg" alt="Hearts of Oak" class="team-logo">
+                            <span>Hearts of Oak</span>
+                        </td>                        <td id="pldC4">3</td>
+                        <td id="winC4">0</td>
+                        <td id="drawC4">1</td>
+                        <td id="lossC4">2</td>
+                        <td id="gfC4">3</td>
+                        <td id="gaC4">6</td>
+                        <td id="gdC4">-3</td>
+                        <td id="ptsC4">1</td>
+                        <td id="qualificationC4">–</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    
+    <!-- Semi-Finals -->
+    <div class="group">
+        <h2>Semi-Final Matches</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Match</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="teamSF1"><img src="/team_logos/Boca_Juniors_logo18.jpeg" alt="Boca Juniors" class="team-logo">
+                        <span>Boca Juniors</span> vs <img src="/team_logos/Galatasaray_4_Sterne_Logo.jpeg" alt="Galatasaray" class="team-logo">
+                        <span>Galatasaray</span></td>
+                </tr>
+                <tr>
+                    <td id="teamSF3"><img src="/team_logos/Real_Madrid_CF.jpeg" alt="Real Madrid" class="team-logo">
+                        <span>Real Madrid</span> vs <img src="/team_logos/RC_Deportivo_La_Coruña_logo.jpeg" alt="Deportivo La Coruña" class="team-logo">
+                        <span>Deportivo La Coruña</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+
+    <!-- Final Match -->
+    <div class="group">
+        <h2>Final Match</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Match</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="teamFinal1">    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Simulation Button (Placed at the bottom) -->
+    <div style="text-align: center; margin: 20px 0;">
+    <button id="simulate-btn">Start Simulation</button></div>
+    <!-- Section to display simulation results -->
+    <div id="simulation-result"></div>
+
+</div>
+<div id="simulation-result">
+    <!-- Results will be shown here -->
+    <!-- Logo Placeholder for the Champion -->
+    <p>
+        <!-- Champion's logo -->
+        <img id="champion-logo" src="" alt="Champion Logo" class="team-logo" style="width: 150px; " />
+    </p>
+    
+    
+</div>
+
+
+<div class="footer">
+    <p>2001 FIFA Club World Championship Results</p>
+</div>
+
+<style>
+    #simulation-result {
+        text-align: center; /* Center the text horizontally */
+        margin: 0 auto; /* Center the div itself within its container */
+        max-width: 80%; /* Set a maximum width for better control */
+        padding: 20px; /* Optional: Add padding for spacing */
+        font-family: Arial, sans-serif; /* Optional: Set a clean font */
+        background-color: #f9f9f9; /* Optional: Add a background color */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+</style>
+
+<script>
+    document.getElementById("simulate-btn").addEventListener("click", function() {
+    // Function to generate random results for regular match score
+    function getRandomResult() {
+        return Math.floor(Math.random() * 5); // Random result between 0 and 4
+    }
+
+    // Function to simulate a penalty shootout if there's a draw
+    function getPenaltyShootoutScore() {
+        // Ensure that one team always wins by generating a higher score for the winner
+        let team1Penalties = Math.floor(Math.random() * 5);
+        let team2Penalties = Math.floor(Math.random() * 5);
+        
+        // If the penalty scores are equal, make sure one team wins
+        while (team1Penalties === team2Penalties) {
+            team2Penalties = Math.floor(Math.random() * 5);
+        }
+
+        return { team1: team1Penalties, team2: team2Penalties };
+    }
+
+    // Function to randomly select a winner based on the scores, including a penalty shootout in case of a draw
+    function getWinner(team1, team2, score1, score2) {
+        if (score1 > score2) {
+            return { winner: team1, penalty: null };
+        } else if (score2 > score1) {
+            return { winner: team2, penalty: null };
+        } else {
+            // In case of a draw, perform a penalty shootout
+            const penalty = getPenaltyShootoutScore();
+            return { 
+                winner: penalty.team1 > penalty.team2 ? team1 : team2,
+                penalty: `Penalties: ${penalty.team1} - ${penalty.team2}`
+            };
+        }
+    }
+
+    // Function to get the correct logo filename based on team name
+    function getLogoFilename(teamName) {
+        const teamLogos = {
+            "Deportivo La Coruña": "RC_Deportivo_La_Coruña_logo.jpeg",
+            "Boca Juniors": "Boca_Juniors_logo18.jpeg",
+            "Galatasaray": "Galatasaray_4_Sterne_Logo.jpeg",
+            "Real Madrid": "Real_Madrid_CF.jpeg",
+            // Add any other team mappings if necessary
+        };
+        return teamLogos[teamName] || `${teamName.replace(/\s+/g, '_')}.jpeg`;
+    }
+
+    // Simulate the semi-finals and final results only (no group output)
+    const simulationData = {
+        "SemiFinal": [
+            {
+                teams: "Boca Juniors vs Galatasaray",
+                score1: getRandomResult(),
+                score2: getRandomResult(),
+                result: function() {
+                    const result = getWinner("Boca Juniors", "Galatasaray", this.score1, this.score2);
+                    return {
+                        score: `${this.score1} - ${this.score2}`,
+                        winner: result.winner,
+                        penalty: result.penalty
+                    };
+                }
+            },
+            {
+                teams: "Real Madrid vs Deportivo La Coruña",
+                score1: getRandomResult(),
+                score2: getRandomResult(),
+                result: function() {
+                    const result = getWinner("Real Madrid", "Deportivo La Coruña", this.score1, this.score2);
+                    return {
+                        score: `${this.score1} - ${this.score2}`,
+                        winner: result.winner,
+                        penalty: result.penalty
+                    };
+                }
+            }
+        ],
+        "Final": [
+            {
+                teams: "",
+                score1: getRandomResult(),
+                score2: getRandomResult(),
+                result: function() {
+                    const result = getWinner(this.teams.split(" vs ")[0], this.teams.split(" vs ")[1], this.score1, this.score2);
+                    return {
+                        score: `${this.score1} - ${this.score2}`,
+                        winner: result.winner,
+                        penalty: result.penalty
+                    };
+                }
+            }
+        ]
+    };
+
+    // Determine the winners of the semi-finals and set the final teams
+    const semiFinal1 = simulationData.SemiFinal[0].result();
+    const semiFinal2 = simulationData.SemiFinal[1].result();
+
+    // Set final match teams based on semi-final results
+    simulationData.Final[0].teams = `${semiFinal1.winner} vs ${semiFinal2.winner}`;
+
+    // Display the simulation results (semi-final and final only)
+    const resultDiv = document.getElementById("simulation-result");
+    let resultHTML = "<h2>Simulation Results:</h2>";
+
+    // Display semi-final results
+    resultHTML += "<h3>SemiFinal Results:</h3>";
+    simulationData.SemiFinal.forEach(item => {
+        const result = item.result();
+        resultHTML += `<p><strong>${item.teams}</strong> - Result: ${result.score} ${result.penalty ? `(${result.penalty})` : ""} - Winner: ${result.winner}</p>`;
+    });
+
+    // Display final match result
+    resultHTML += "<h3>Final Result:</h3>";
+    const finalMatch = simulationData.Final[0];
+    const finalResult = finalMatch.result();
+    resultHTML += `<p><strong>${finalMatch.teams}</strong> - Result: ${finalResult.score} ${finalResult.penalty ? `(${finalResult.penalty})` : ""}</p>`;
+
+    // Champion display
+    const champion = finalResult.winner;  // Correctly extract the winner's name from the final result
+    resultHTML += `<h2>🏆 Champion: <span id="champion-name">${champion}</span> 🏆</h2>`;
+
+    // Get the correct logo filename for the champion
+    const logoFilename = getLogoFilename(champion);
+    const logoPath = `../team_logos/${logoFilename}`;  // Updated to go up one level to the root
+
+    // Update the `img` src attribute to show the champion's logo
+    document.getElementById("champion-logo").src = logoPath;
+
+    // Update the result div with the simulation results
+    resultDiv.innerHTML = resultHTML;
+});
+
+</script>
+
+
+
+
+
+</body>
+</html>
