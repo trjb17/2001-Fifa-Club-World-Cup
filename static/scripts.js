@@ -123,7 +123,7 @@ document.getElementById("simulate-btn").addEventListener("click", function() {
 
     // Get the correct logo filename for the champion
     const logoFilename = getLogoFilename(champion);
-    const logoPath = `../team_logos/${logoFilename}`;  // Updated to go up one level to the root
+    const logoPath = `/team_logos/${logoFilename}`;  // Updated to go up one level to the root
 
     // Update the `img` src attribute to show the champion's logo
     document.getElementById("champion-logo").src = logoPath;
