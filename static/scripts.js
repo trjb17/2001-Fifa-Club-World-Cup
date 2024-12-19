@@ -40,6 +40,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Boca Juniors": "Boca_Juniors_logo18.jpeg",
                 "Galatasaray": "Galatasaray_4_Sterne_Logo.jpeg",
                 "Real Madrid": "Real_Madrid_CF.jpeg",
+                "Accra Hearts of Oak": "Accra_hearts_of_oak_sc.jpeg",
+                "Al-Hilal": "Al-Hilal_SFC_logo.jpeg",
+                "Jubilo Iwata": "Jubilo_Iwata_logo.jpeg",
+                "Los Angeles Galaxy": "Los_Angeles_Galaxy_logo.jpeg",
+                "Olimpia Honduras": "Olimpia_Honduras.jpeg",
+                "Palmeiras": "Palmeiras_logo.jpeg",
+                "Wollongong Wolves": "Wollongong_Wolves_FC.jpeg",
+                "Zamalek SC": "Zamalek_SC_logo.jpeg"
             };
             return teamLogos[teamName] || `${teamName.replace(/\s+/g, '_')}.jpeg`;
         }
@@ -121,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Get the correct logo filename for the champion
         const logoFilename = getLogoFilename(champion);
-        const logoPath = `/team_logos/${logoFilename}`;
+        const logoPath = `https://trjb17.github.io/2001-Fifa-Club-World-Cup/team_logos/${logoFilename}`;
 
         // Update the `img` src attribute to show the champion's logo
         document.getElementById("champion-logo").src = logoPath;
